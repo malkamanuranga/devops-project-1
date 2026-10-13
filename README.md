@@ -1,24 +1,10 @@
-
-### 1. Repository Description (GitHub Blurb)
-
-*Copy and paste this directly into your GitHub repository settings:*
-
-> A containerized Python Flask web application demonstrating core DevOps principles, featuring automated unit testing with Pytest and a production-ready Dockerfile.
-
----
-
-### 2. The `README.md` File
-
-*Replace the entire contents of your `README.md` file in VS Code with the text below:*
-
-```markdown
 # DevOps Project: Containerized Flask Application with Automated Testing
 
 A lightweight Python Flask web application engineered to demonstrate foundational DevOps practices, local containerization, and automated testing workflows. This repository serves as the baseline architecture for an upcoming CI/CD pipeline integration.
 
 ---
 
- 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 * **Language:** Python 3.10
 * **Framework:** Flask
@@ -59,7 +45,7 @@ Ensure you have the following installed locally:
 Clone the repository and configure your virtual environment:
 
 ```bash
-git clone [https://github.com/malkamanuranga/devops-project-1.git](https://github.com/malkamanuranga/devops-project-1.git)
+git clone https://github.com/malkamanuranga/devops-project-1.git
 cd devops-project-1
 
 # Create and activate virtual environment
@@ -136,7 +122,3 @@ docker rm flask-container
 
 * [ ] Implement GitHub Actions workflow for automated build and test on push.
 * [ ] Configure AWS infrastructure provisioning.
-
-```
-
-```
