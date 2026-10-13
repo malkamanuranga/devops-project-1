@@ -1,6 +1,0 @@
-# Created by pytest automatically.
-__pycache__/
-*.pyc
-.pytest_cache/
-.env
-venv/
