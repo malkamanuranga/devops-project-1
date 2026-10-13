@@ -1,27 +1,142 @@
 
-DevOps Project 1: Dockerized Flask App + Automated Testing
+### 1. Repository Description (GitHub Blurb)
 
+*Copy and paste this directly into your GitHub repository settings:*
 
-📌 What's this about?
+> A containerized Python Flask web application demonstrating core DevOps principles, featuring automated unit testing with Pytest and a production-ready Dockerfile.
 
-This is a straightforward Python Flask app built to showcase fundamental DevOps practices. The main goal here was to set up a solid baseline for Continuous Integration (CI) by containerizing the application and making sure unit tests run automatically.
-It’s a clean, minimal setup meant to serve as a building block for more complex pipelines.
+---
 
-🛠️ The Tech Stack
+### 2. The `README.md` File
 
-• Backend: Python 3.10 & Flask
-• Testing: Pytest
-• Containerization: Docker
-• Source Control: Git + GitHub
+*Replace the entire contents of your `README.md` file in VS Code with the text below:*
 
-📁 Project Structure
+```markdown
+# DevOps Project: Containerized Flask Application with Automated Testing
 
-text
+A lightweight Python Flask web application engineered to demonstrate foundational DevOps practices, local containerization, and automated testing workflows. This repository serves as the baseline architecture for an upcoming CI/CD pipeline integration.
+
+---
+
+ 🛠️ Tech Stack
+
+* **Language:** Python 3.10
+* **Framework:** Flask
+* **Testing:** Pytest
+* **Containerization:** Docker
+* **Version Control:** Git & GitHub
+
+---
+
+## 📁 Project Structure
+
+```text
 devops-project-1/
-├── .github/workflows/   # (Coming Soon) CI/CD pipeline configs
-├── .gitignore           # Keeps venv, __pycache__, etc. out of source control
-├── app.py               # The main Flask application
-├── Dockerfile           # Blueprint for building the Docker image
-├── requirements.txt     # Python package dependencies
-├── test_app.py          # Automated unit tests via Pytest
-└── README.md            # You are here!
+├── .github/workflows/   # CI/CD pipeline configurations (Coming Soon)
+├── .gitignore           # Excluded files and directories (venv, cache, etc.)
+├── app.py               # Main Flask application entry point
+├── Dockerfile           # Multi-stage/base image container build instructions
+├── requirements.txt     # Python runtime dependencies
+├── test_app.py          # Pytest automated test suite
+└── README.md            # Project documentation
+
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed locally:
+
+* Python 3.10+
+* Docker Desktop
+* Git
+
+### 1. Local Development Setup
+
+Clone the repository and configure your virtual environment:
+
+```bash
+git clone [https://github.com/malkamanuranga/devops-project-1.git](https://github.com/malkamanuranga/devops-project-1.git)
+cd devops-project-1
+
+# Create and activate virtual environment
+python -m venv venv
+
+# Windows (PowerShell / Command Prompt)
+.\venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
+
+```
+
+Install the project dependencies:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### 2. Running the Application
+
+Start the local development server:
+
+```bash
+python app.py
+
+```
+
+Open [http://localhost:5000](http://localhost:5000) in your browser to verify the application is running.
+
+### 3. Running Automated Tests
+
+Execute the test suite using `pytest`:
+
+```bash
+pytest test_app.py
+
+```
+
+---
+
+## 🐳 Docker Deployment
+
+To build and run the application inside a container:
+
+### Build the Docker Image
+
+```bash
+docker build -t devops-flask-app .
+
+```
+
+### Run the Container
+
+```bash
+docker run -d -p 5000:5000 --name flask-container devops-flask-app
+
+```
+
+Access the containerized application at [http://localhost:5000](http://localhost:5000).
+
+To stop and remove the container when finished:
+
+```bash
+docker stop flask-container
+docker rm flask-container
+
+```
+
+---
+
+## 🗺️ Roadmap
+
+* [ ] Implement GitHub Actions workflow for automated build and test on push.
+* [ ] Configure AWS infrastructure provisioning.
+
+```
+
+```
